@@ -16,7 +16,7 @@ function Use-GitFetch { git fetch }
 function Use-GitBranch { git branch }
 function Use-GitBranchArgs { git branch $args }
 function Use-GitSwitchBranch($branch) { git switch $branch }
-function Use-GitSwitchC { git switch -c }
+function Use-GitSwitchC($branch) { git switch -c $branch }
 function Use-GitSwitchBack { git switch - }
 function Use-GitSwitchDevelop { git switch develop }
 function Use-GitSwitchMaster { git switch master }
@@ -44,7 +44,7 @@ Set-Alias -Name gf -Value Use-GitFetch #git fetch
 Set-Alias -Name gb -Value Use-GitBranch #git branch --show-current
 Set-Alias -Name gba -Value Use-GitBranchArgs #git branch $args
 Set-Alias -Name gsa -Value Use-GitSwitchBranch #git switch $branch
-Set-Alias -Name gsc -Value Use-GitSwitchC #git switch -c
+Set-Alias -Name gsc -Value Use-GitSwitchC #git switch -c $branch
 Set-Alias -Name gsb -Value Use-GitSwitchBack #git switch -
 Set-Alias -Name gsd -Value Use-GitSwitchDevelop #git switch develop
 Set-Alias -Name gsm -Value Use-GitSwitchMaster #git switch master
