@@ -31,7 +31,7 @@ function Use-Git($command, $p1, $p2) {
         ln { git log --graph --abbrev-commit --decorate --format=oneline -$p1; break; }
         cl { git clean -df; break; }
         sh { git show; break; }
-        shf { git git show --pretty='format:' --name-only; break; }
+        shf { git show --pretty='format:' --name-only; break; }
         r { git reset; break; }
         rh { git reset --hard; break; }
         Default { 'nothing' }
