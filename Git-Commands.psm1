@@ -34,6 +34,8 @@ function Use-Git($command, $p1, $p2) {
         shf { git show --pretty='format:' --name-only; break; }
         r { git reset; break; }
         rh { git reset --hard; break; }
+        rev { git revert $p1 }
+        revm { git revert $p1 -m $p2 } #git revert 8f937c6 -m 1 (оставить основание из ствола/отбросить изменения из ветки)
         Default { 'nothing' }
     }
 }
