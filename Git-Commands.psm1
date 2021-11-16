@@ -12,6 +12,7 @@ function Use-Git($command, $p1, $p2) {
         p { git pull; break; }
         pu { git push; break; }
         pud { git push -u origin HEAD; break; }
+        puf { git push --force-with-lease; break; }
         f { git fetch; break; }
         b { git branch; break; }
         br { git branch -r ; break; }
@@ -20,8 +21,12 @@ function Use-Git($command, $p1, $p2) {
         swb { git switch -; break; }
         swd { git switch develop; break; }
         swm { git switch master; break; }
+        swma { git switch main; break; }
+        swt { git switch trunk; break; }
         cm { git commit -m $p1; break; }
         cam { git commit -am $p1; break; }
+        cman { git commit --amend --no-edit; break; }
+        cmam { git commit --amend -m $p1; break; }
         aa { git add --all; break; }
         af { git add -- $p1; break; }
         d { git diff; break; }
